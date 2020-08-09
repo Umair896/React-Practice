@@ -13,11 +13,19 @@
 
     <script type="text/babel">
       class App extends React.Component {
+        state = {
+          name: "Umair",
+          age: 23,
+          location: "bangalore",
+        };
         render() {
           return (
             <div className="app-content">
               <h1>Hi React</h1>
               <h3>Coming to learn you</h3>
+              <h4>
+                My name is {this.state.name} with age {this.state.age} living in {this.state.location}
+              </h4>
             </div>
           );
         }
