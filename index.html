@@ -19,9 +19,27 @@
           location: "bangalore",
         };
 
-        handleClick(e) {
-          console.log(e.target);
-        }
+        // handleClick(e) {
+        //   // console.log(e.target);
+        // }
+
+        //printing state items ....
+        // handleClick(e) {
+        //   // console.log(this.state);---------->error, use arrow fn
+        // }
+
+        // handleClick = (e) => {
+        //   console.log(this.state);
+        // };
+
+        //chamging state items on click
+        handleClick = (e) => {
+          this.setState({
+            name: "Ansari",
+            age: "20",
+            location: "Mysore",
+          });
+        };
 
         handleMouseOver(e) {
           console.log(e);
