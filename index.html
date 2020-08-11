@@ -19,52 +19,25 @@
           location: "bangalore",
         };
 
-        // handleClick(e) {
-        //   // console.log(e.target);
-        // }
-
-        //printing state items ....
-        // handleClick(e) {
-        //   // console.log(this.state);---------->error, use arrow fn
-        // }
-
-        // handleClick = (e) => {
-        //   console.log(this.state);
-        // };
-
-        //chamging state items on click
-        handleClick = (e) => {
+        handleChange = (e) => {
           this.setState({
-            name: "Ansari",
-            age: "20",
-            location: "Mysore",
+            name: e.target.value,
           });
         };
 
-        handleMouseOver(e) {
-          console.log(e);
-        }
-
-        handleMouseOver1(e) {
-          console.log(e.target, e.pageX);
-        }
-
-        handleCopy(e) {
-          console.log("Yor item is being copied");
-        }
+        handleSubmit = (e) => {
+          e.preventDefault();
+          console.log("Form submitted", this.state.name);
+        };
 
         render() {
           return (
             <div className="app-content">
-              <h1>Hi React</h1>
-              <h3>Coming to learn you</h3>
-              <h4>
-                My name is {this.state.name} with age {this.state.age} living in {this.state.location}
-              </h4>
-              <button onClick={this.handleClick}>Click Me</button>
-              <button onMouseOver={this.handleMouseOver}>Hover Me</button>
-              <button onMouseOver={this.handleMouseOver1}>Hover Me1</button>
-              <p onCopy={this.handleCopy}> This copied item event will be printed in console </p>
+              <h1> My name is {this.state.name}</h1>
+              <form onSubmit={this.handleSubmit}>
+                <input type="text" onChange={this.handleChange} />
+                <button>Submit</button>
+              </form>
             </div>
           );
         }
