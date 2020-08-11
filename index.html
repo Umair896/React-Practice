@@ -18,6 +18,23 @@
           age: 23,
           location: "bangalore",
         };
+
+        handleClick(e) {
+          console.log(e.target);
+        }
+
+        handleMouseOver(e) {
+          console.log(e);
+        }
+
+        handleMouseOver1(e) {
+          console.log(e.target, e.pageX);
+        }
+
+        handleCopy(e) {
+          console.log("Yor item is being copied");
+        }
+
         render() {
           return (
             <div className="app-content">
@@ -26,6 +43,10 @@
               <h4>
                 My name is {this.state.name} with age {this.state.age} living in {this.state.location}
               </h4>
+              <button onClick={this.handleClick}>Click Me</button>
+              <button onMouseOver={this.handleMouseOver}>Hover Me</button>
+              <button onMouseOver={this.handleMouseOver1}>Hover Me1</button>
+              <p onCopy={this.handleCopy}> This copied item event will be printed in console </p>
             </div>
           );
         }
