@@ -6,7 +6,8 @@ function App() {
     <div className="App">
       <h3>Lets Start</h3>
       <h4>These are the details of students</h4>
-      <Code />
+      <Code name="Umair" age="23" location="Bangalore" />
+      <Code name="Ansari" age="22" location="Mysore" />
     </div>
   );
 }
