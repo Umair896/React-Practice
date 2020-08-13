@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Code from "./code";
+import AddCode from "./AddCode";
 
 class App extends Component {
   state = {
@@ -15,6 +16,7 @@ class App extends Component {
         <h3>Lets Start</h3>
         <h4>These are the details of students</h4>
         <Code info={this.state.info} />
+        <AddCode />
       </div>
     );
   }
