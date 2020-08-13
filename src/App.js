@@ -10,13 +10,20 @@ class App extends Component {
       { number: "3", name: "Ovais", age: "25", location: "Mumbai" },
     ],
   };
+  addCode = (ninja) => {
+    ninja.id = Math.random();
+    let info = [...this.state.info, ninja];
+    this.setState({
+      info: info,
+    });
+  };
   render() {
     return (
       <div className="App">
         <h3>Lets Start</h3>
         <h4>These are the details of students</h4>
         <Code info={this.state.info} />
-        <AddCode />
+        <AddCode addCode={this.addCode} />
       </div>
     );
   }
